@@ -1,0 +1,1075 @@
+<!doctype html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>赫晖</title>
+
+	<style type="text/css">	@font-face {
+
+	font-family:HarmonyOS_Sans_SC_Medium;font-style: normal;font-display: swap;
+
+    src: url('http://cnmsbb.top/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2') format('woff2');
+
+}
+
+* {
+
+	font-family: HarmonyOS_Sans_SC_Medium;
+
+}
+
+::selection{background:#212121;color:#fff}
+
+::-webkit-scrollbar{width:5px;height:100%;background-color:#fff}
+
+::-webkit-scrollbar-track{background:linear-gradient(135deg,#fff 0,#fff 100%)}
+
+::-webkit-scrollbar-thumb{border-radius:20px;-webkit-box-shadow:inset 0 0 6px rgba(255,255,255,.3);background-color:#212121}
+
+::-webkit-scrollbar-thumb:hover{border-radius:20px;-webkit-box-shadow:inset 0 0 5px rgba(255,255,255,.2);background:#212121}
+
+body {
+
+	font-family: 'HarmonyOS_Sans_SC_Medium';
+
+    font-size: 15px;
+
+	background-color: #f7f7f7;
+
+    -webkit-font-smoothing: antialiased;
+
+    background-position: left top;
+
+    background-size: auto;
+
+    background-repeat: repeat;
+
+    background-attachment: fixed;
+
+	color: rgba(34,47,62,1);
+
+	margin: 0 auto;
+
+	padding: 0;
+
+	width: 100%;
+
+	line-height: 1.8;
+
+}
+
+* {
+
+	margin: 0;
+
+	padding: 0;
+
+	list-style: none;
+
+	-webkit-touch-callout: none;
+
+	-khtml-user-select: none;
+
+	-ms-user-select: none;
+
+	user-select: none;
+
+}
+
+p {
+
+	margin: 0;
+
+	font-variant-ligatures: common-ligatures discretionary-ligatures;
+
+}
+
+a {
+
+	text-decoration: none;
+
+}
+
+a:link,a:visited {
+
+	color: rgba(34,47,62,0.7);
+
+	opacity: 1;
+
+	-webkit-transition: all 0.15s linear;
+
+    -moz-transition: all 0.15s linear;
+
+    -o-transition: all 0.15s linear;
+
+    -ms-transition: all 0.15s linear;
+
+    transition: all 0.15s linear;
+
+}
+
+a:hover,a:active {
+
+	color: #000;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+
+	text-rendering: optimizeLegibility;
+
+}
+
+.main {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+
+    width: 50rem;
+
+    border-radius: 10px;
+
+    margin-top: 60px;
+
+    background: rgba(255,255,255,1);
+
+    box-shadow: 0px 0px 30px 5px rgba(119,118,118,0.33);
+
+}
+
+.content {
+
+	margin: 0 auto;
+
+	width: 720px;
+
+	height: auto;
+
+    margin-bottom: 1rem;
+
+}
+
+.list_with_title .container {
+
+	margin: 0 auto;
+
+	width: 720px;
+
+}
+
+.header {
+
+	margin: 0 auto;
+
+	padding: 50px 0px 20px 0px;
+
+	max-width: 720px;
+
+	background-size: cover;
+
+	flex-wrap: wrap;
+
+	-webkit-background-size: cover;
+
+}
+
+.header .me-tx {
+
+    text-align: end;
+
+}
+
+.header .me-tx img {
+
+	width: 60px;
+
+	height: 60px;
+
+	border-radius: 10px;
+
+	box-shadow: 0 2px 4px -2px rgb(0 0 0 / 50%);
+
+}
+
+.header .description{
+
+    margin-top: -4rem;
+
+}
+
+.header .description h1{
+
+	color: rgba(0, 0, 0, 0.918);
+
+    font-size: 3rem;
+
+}
+
+.header .description p{
+
+	color: rgba(34,47,62,0.4);
+
+	font-size: 14px;
+
+}
+
+.header .description .sub_title {
+
+	float: none !important;
+
+	list-style: none;
+
+	font-weight: normal !important;
+
+	flex: 3;
+
+	justify-content: end;
+
+}
+
+.link_a{padding-right:5px!important;padding-left:5px!important}
+
+.links-list-item{margin: 1rem;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s;border-radius:10px;transition-timing-function:ease-in-out;position:relative;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+
+.links-list-item a{display:flex;border:none;align-items:center}
+
+.links-list-item:hover .links-avatar{transform:scale(2)}
+
+.links-list-item:hover .links-item-info span{transform:translateX(20%) translateY(0)}
+
+.links-avatar{margin:10px 20px 10px 10px;border-radius: 10px;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s;background:#f5f5f5;max-width:60px;max-height:60px}
+
+.links-item-name{text-align:left;font-size:18px;color:#000;display:block;font-weight:700;align-items:center;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s}
+
+.links-item-desc{white-space:normal;color:#000;text-align:left;text-overflow:ellipsis;opacity:.7;font-weight:700;display:block;font-size:14px;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s}
+
+.flexbox{
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+
+    flex-wrap: wrap;
+
+    margin-right: -20px;
+
+    margin-left: -20px;
+
+}
+
+.flex-50{
+
+    -ms-flex: 0 0 50%;
+
+    flex: 0 0 50%;
+
+    max-width: 50%;
+
+}
+
+.footer {
+
+    clear: both;
+
+    margin: 0 auto;
+
+    padding: 25px 0px;
+
+    max-width: 800px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+}
+
+.footer .powered_by {
+
+    margin: 0;
+
+    color: rgba(34,47,62,0.2);
+
+    font-size: 11px;
+
+}
+
+.footer .powered_by a {
+
+    margin: 0px 2px;
+
+    color: rgba(34,47,62,0.2);
+
+}
+
+.footer .powered_by a:hover {
+
+    color: #000;
+
+}
+
+@media screen and (max-width: 800px){
+
+    .main {
+
+    margin-top: 0px;
+
+    width: 100%;
+
+    border: 0;
+
+    }
+
+    .content {
+
+        width: auto;
+
+    }
+
+    .header,.index_element{
+
+        margin: 1rem;
+
+    }
+
+    .flex-50{
+
+        -ms-flex: 0 0 100%;
+
+        flex: 0 0 100%;
+
+        max-width: 100%;
+
+    }
+
+}
+
+	</style>
+
+</head>
+
+<body>
+
+    <div class=" main">
+
+        <div class="header">
+
+            <div class="me-tx">
+
+                <a href="">
+
+                    <img src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg" class="long">
+
+                </a>
+
+            </div>
+
+            <div class="description">
+
+                <h1>Hello!</h1>
+
+                <p>从我说爱你的那一刻起 你在我这里就是永远的top1.</p>
+
+                   <p class="links-item-name ell">赫晖QQ：2990608392</p>
+
+            </div>
+
+        </div>
+
+        <div class="index_element">
+
+            <section id="" class="content"><h3>在这个文案满天飞的时代 早就分不清话的真假了.</h3></section>
+
+            <section id="links" class="content">
+
+                <h3><a>我的站点</a></h3>
+
+                <div class="links-content flexbox"> 
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://10.100.157.68:8080"  rel="external nofollow noreferrer" title=" 槐根梦觉，苦尽甘来，花也喜欢，山也相爱。" target="_blank">
+
+                            <img class="links-avatar" alt=" 不止于此 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> API </span>
+
+                                <span class="links-item-desc ell" title=" 比起尽我所能，我更喜欢全力以赴。">“流言蜚语四面八方扑面而来 你是转身就走还是紧握我的手”</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+<div class="links-card flex-50">
+
+                        
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://小叉.xiaocha.fun" rel="external nofollow noreferrer" title=" 风尘仆仆，终有归途" target="_blank">
+
+                            <img class="links-avatar" alt=" 人间惊鸿 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> MC </span>
+
+                                <span class="links-item-desc ell" title=" 一睹人间盛世颜"> 一定要文采斐然吗 我磕磕绊绊的表达也是爱意.</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+					
+
+					<div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="a/index.html" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 网盘 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 其实我也没有这么倔强 说句爱我 我就投降</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+                    
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="zyj1.html" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 照妖镜 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 我不喜欢争 也不喜欢抢 如果身边围绕你的人太多 我自己退场.</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+<div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://apk.xiaocha.fun/apk/黄鸟.apk" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 黄鸟 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 一款抓取数据的软件</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+                    
+
+     <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="dx.html" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 待开发 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 其实我也没有这么倔强 说句爱我 我就投降</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	                               
+
+                                    
+
+                                    
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://y.xiaocha.fun" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 待开发 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 我不是胆小鬼 高举爱旗就是我的life   style.</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+<div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="chi.html" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 待开发 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 喜欢的歌要一直听 爱的人要拉紧</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    	<div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://bbq.xiaocha.fun" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 待开发 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 假装有文案</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+                    
+
+                                                                       <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="http://hebai.asia/" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 赫晖官网 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 念念不忘 必有回响</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    	<div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="nmlt" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 匿名聊天室 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 其实我也没有这么倔强 说句爱我 我就投降</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+                    
+
+               
+
+                    
+
+                    <div class="links-card flex-50">
+
+<div class="links-list-item" style="">
+
+                            <a href="myd" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 秘语岛 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 假装有文案</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div
+
+                    
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="djs" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 空 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 假装有文案 </span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div
+
+                  
+
+                    
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="djs" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 新年倒计时 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 爱是必胜局</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div
+
+                    
+
+                    <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="qsy" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 短视频去水印 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 其实我也没有这么倔强 说句爱我 我就投降</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>	
+
+                                                                       <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="about_me.html" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 关于赫晖 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 爱是必胜局</span>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div
+
+                    
+
+                  <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="xia.xiaocha.fun/xx" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-3/694280d0-fcb3-415d-9da6-cedde66b7a01.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell"> 空 </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 念念不忘 必有回响</span>
+
+                         <div class="links-card flex-50">
+
+                        <div class="links-list-item" style="">
+
+                            <a href="https://jq.qq.com/?_wv=1027&k=3pdp1hHo" rel="external nofollow noreferrer" title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+
+                            <img class="links-avatar" alt=" 云中之谷 " src="tu/3.jpg">
+
+                            <div class="links-item-info">
+
+                                <span class="links-item-name ell">  </span>
+
+                                <span class="links-item-desc ell" title=" 我爱你人众皆知"> 人生故事虽是浪漫，但请别忘记他只是过场</span>
+
+                       </div>
+
+                            </a>
+
+                        </div>
+
+                    </div                                                                                          
+
+                </div>           
+
+            </section>
+
+<div class="footer">
+
+        <div class="powered_by">
+
+			<p>
+
+			<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>欢迎来自：
+
+			<script type="text/javascript"> document.write(returnCitySN["cname"]+'的访客,你的ip地址是：'+returnCitySN["cip"]) </script>
+
+            </p>
+
+<!--现在时间-->
+
+<div>现在时间是：</div>
+
+<div class="card-content">
+
+<canvas id="canvas" style="width:100%;" width="820" height="250"></canvas>
+
+<script>
+
+(function(){var t=820;var a=250;var r=7;var n=10;var e=.65;var f;var o=[];const v=["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];var h=[];var u=[[[0,0,1,1,1,0,0],[0,1,1,0,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,0,1,1,0],[0,0,1,1,1,0,0]],[[0,0,0,1,1,0,0],[0,1,1,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[1,1,1,1,1,1,1]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,1,1,0,0,0],[0,1,1,0,0,0,0],[1,1,0,0,0,0,0],[1,1,0,0,0,1,1],[1,1,1,1,1,1,1]],[[1,1,1,1,1,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,1,1,1,0,0],[0,0,0,0,1,1,0],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,0,0,0,1,1,0],[0,0,0,1,1,1,0],[0,0,1,1,1,1,0],[0,1,1,0,1,1,0],[1,1,0,0,1,1,0],[1,1,1,1,1,1,1],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,1,1,1,1]],[[1,1,1,1,1,1,1],[1,1,0,0,0,0,0],[1,1,0,0,0,0,0],[1,1,1,1,1,1,0],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,0,0,0,1,1,0],[0,0,1,1,0,0,0],[0,1,1,0,0,0,0],[1,1,0,0,0,0,0],[1,1,0,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[1,1,1,1,1,1,1],[1,1,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,0,0,1,1,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0],[0,0,1,1,0,0,0]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,1,1,0]],[[0,1,1,1,1,1,0],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[1,1,0,0,0,1,1],[0,1,1,1,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,0,1,1],[0,0,0,0,1,1,0],[0,0,0,1,1,0,0],[0,1,1,0,0,0,0]],[[0,0,0,0],[0,0,0,0],[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0],[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0]]];function l(t){var a=[];f.fillStyle="#005EAC";var r=new Date;var e=70,o=30;var v=r.getHours();var u=Math.floor(v/10);var l=v%10;a.push({num:u});a.push({num:l});a.push({num:10});var c=r.getMinutes();var u=Math.floor(c/10);var l=c%10;a.push({num:u});a.push({num:l});a.push({num:10});var M=r.getSeconds();var u=Math.floor(M/10);var l=M%10;a.push({num:u});a.push({num:l});for(var p=0;p<a.length;p++){a[p].offsetX=e;e=m(e,o,a[p].num,t);if(p<a.length-1){if(a[p].num!=10&&a[p+1].num!=10){e+=n}}}if(h.length==0){h=a}else{for(var C=0;C<h.length;C++){if(h[C].num!=a[C].num){s(a[C]);h[C].num=a[C].num}}}i(t);g();return r}function s(t){var a=t.num;var n=u[a];for(var e=0;e<n.length;e++){for(var f=0;f<n[e].length;f++){if(n[e][f]==1){var h={offsetX:t.offsetX+r+r*2*f,offsetY:30+r+r*2*e,color:v[Math.floor(Math.random()*v.length)],g:1.5+Math.random(),vx:Math.pow(-1,Math.ceil(Math.random()*10))*4+Math.random(),vy:-5};o.push(h)}}}}function i(t){for(var a=0;a<o.length;a++){t.beginPath();t.fillStyle=o[a].color;t.arc(o[a].offsetX,o[a].offsetY,r,0,2*Math.PI);t.fill()}}function g(){var n=0;for(var f=0;f<o.length;f++){var v=o[f];v.offsetX+=v.vx;v.offsetY+=v.vy;v.vy+=v.g;if(v.offsetY>a-r){v.offsetY=a-r;v.vy=-v.vy*e}if(v.offsetX>r&&v.offsetX<t-r){o[n]=o[f];n++}}for(;n<o.length;n++){o.pop()}}function m(t,a,n,e){var f=u[n];for(var o=0;o<f.length;o++){for(var v=0;v<f[o].length;v++){if(f[o][v]==1){e.beginPath();e.arc(t+r+r*2*v,a+r+r*2*o,r,0,2*Math.PI);e.fill()}}}e.beginPath();t+=f[0].length*r*2;return t}var c=document.getElementById("canvas");c.width=t;c.height=a;f=c.getContext("2d");var M=new Date;setInterval(function(){f.clearRect(0,0,f.canvas.width,f.canvas.height);l(f)},50)})();
+
+</script>
+
+</div>
+
+<!--现在时间-->
+
+<p>来自于赫晖的诚意</p>
+
+            <span><a href="#" target="_blank" rel="nofollow noopener">爱是逆风局 也是必胜局</a></span>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+!function(e, t, a) {
+
+function r() {
+
+for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+
+requestAnimationFrame(r)
+
+}
+
+function n() {
+
+var t = "function" == typeof e.onclick && e.onclick;
+
+e.onclick = function(e) {
+
+t && t(),
+
+o(e)
+
+}
+
+}
+
+function o(e) {
+
+var a = t.createElement("div");
+
+a.className = "heart",
+
+s.push({
+
+el: a,
+
+x: e.clientX - 5,
+
+y: e.clientY - 5,
+
+scale: 1,
+
+alpha: 1,
+
+color: c()
+
+}),
+
+t.body.appendChild(a)
+
+}
+
+function i(e) {
+
+var a = t.createElement("style");
+
+a.type = "text/css";
+
+try {
+
+a.appendChild(t.createTextNode(e))
+
+} catch(t) {
+
+a.styleSheet.cssText = e
+
+}
+
+t.getElementsByTagName("head")[0].appendChild(a)
+
+}
+
+function c() {
+
+return "rgb(" + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + ")"
+
+}
+
+var s = [];
+
+e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame ||
+
+function(e) {
+
+setTimeout(e, 1e3 / 60)
+
+},
+
+i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),
+
+n(),
+
+r()
+
+} (window, document);
+
+</script>
+
+<audio autoplay="">
+
+<source src="http://jintia.jintias.cn/api/rand.music.php?sort=热歌榜&amp;format=mp3" type="audio/mpeg">
+
+</audio>
+
+</body>
+
+</html><
+
+</script>
+
+</div></body>
+
+<script type="text/javascript">
+
+      //定义获取词语下标
+
+      var a_idx = 0;
+
+      jQuery(document).ready(function ($) {
+
+        //点击body时触发事件
+
+        $("body").click(function (e) {
+
+          //需要显示的词语
+
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+
+          //设置词语给span标签
+
+          var $i = $("<span/>").text(a[a_idx]);
+
+          //下标等于原来下标+1  余 词语总数
+
+          a_idx = (a_idx + 1) % a.length;
+
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+
+          //获取x和y的指针坐标
+
+          var x = e.pageX, y = e.pageY;
+
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+
+          $i.css({
+
+            "z-index": 999,
+
+            "top": y - 20,
+
+            "left": x,
+
+            "position": "absolute",
+
+            "font-weight": "bold",
+
+            "color": rand_color()
+
+          });
+
+          // 随机颜色
+
+          function rand_color() {
+
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+
+          }
+
+          //在body添加这个标签
+
+          $("body").append($i);
+
+          //animate() 方法执行 CSS 属性集的自定义动画。
+
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+
+//详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+
+          $i.animate({
+
+            //将原来的位置向上移动180
+
+            "top": y - 180,
+
+            "opacity": 0
+
+            //1500动画的速度
+
+          }, 1500, function () {
+
+            //时间到了自动删除
+
+            $i.remove();
+
+          });
+
+        });
+
+      })
+
+      ;
+
+</script>
+
+</html>
