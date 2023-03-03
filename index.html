@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- MDUI -->
+
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title>赫晖</title>
+
+    <script src="index.js"></script>
+
+    <script src="index.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="theme.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<script>
+
+    function activeTab1() {
+
+        document.getElementById('tabIcon1').classList.add("mdui-color-blue-200");
+
+        document.getElementById('tabIcon1').style.padding = "4px 24px";
+
+        document.getElementById('tabIcon2').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon2').style.padding = "4px 4px";
+
+        document.getElementById('tabIcon3').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon3').style.padding = "4px 4px";
+
+    }
+
+    function activeTab2() {
+
+        document.getElementById('tabIcon3').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon3').style.padding = "4px 4px";
+
+        document.getElementById('tabIcon2').classList.add("mdui-color-blue-200");
+
+        document.getElementById('tabIcon2').style.padding = "4px 24px";
+
+        document.getElementById('tabIcon1').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon1').style.padding = "4px 4px";
+
+    }
+
+    function activeTab3() {
+
+        document.getElementById('tabIcon3').classList.add("mdui-color-blue-200");
+
+        document.getElementById('tabIcon3').style.padding = "4px 24px";
+
+        document.getElementById('tabIcon2').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon2').style.padding = "4px 4px";
+
+        document.getElementById('tabIcon1').classList.remove("mdui-color-blue-200");
+
+        document.getElementById('tabIcon1').style.padding = "4px 4px";
+
+    }
+
+    activeTab1();
+
+</script>
+
+<body class="mdui-theme-primary-indigo mdui-theme-accent-blue" style="padding-top: 150px">
+
+    <div id="app" class="mdui-container">
+
+        <div class="mdui-appbar mdui-appbar-fixed">
+
+            <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-inset mdui-shadow-0">
+
+                <div class="mdui-toolbar  mdui-color-blue-100">
+
+                    <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
+
+                    <span class="mdui-typo-headline"></span>
+
+                    <span class="mdui-typo-title"> </span>
+
+                    <div class="mdui-toolbar-spacer"></div>
+
+                    <a href="javascript:window.open('http://192.168.1.70:8080');" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">link</i></a>
+
+                    <a href="javascript:mdui.alert('欢迎使用本网站，群号：763742667<br>','关于')" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">info_outline</i></a>
+
+                </div>
+
+                <div class="mdui-tab mdui-tab-centered mdui-color-blue-100" mdui-tab>
+
+                    <a href="#example-1" class="mdui-ripple mdui-ripple-white" onclick="activeTab1()">
+
+                        <i class="mdui-icon material-icons" id="tabIcon1">apps</i>
+
+                        <label>主页</label>
+
+                    </a>
+
+                    <a href="#example-2" class="mdui-ripple mdui-ripple-white" onclick="activeTab2()">
+
+                        <i class="mdui-icon material-icons" id="tabIcon2">beach_access</i>
+
+                        <label>视频</label>
+
+                    </a>
+
+                    <a href="#example-3" class="mdui-ripple mdui-ripple-white" onclick="activeTab3()">
+
+                        <i class="mdui-icon material-icons" id="tabIcon3">business_center</i>
+
+                        <label>软件库</label>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+        </div>
+
+        <div class="mdui-drawer mdui-drawer-full-height mdui-color-theme-blue" id="drawer">
+
+            <!-- 顶部图片 -->
+
+            <div class="chtb">
+
+                <img src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/76aed787-5fa3-4e8c-8b89-b1e16b9f22c5.jpg" style="aspect-ratio: 1225/597;width: 100%;">
+
+            </div>
+
+            <ul class="mdui-list" mdui-collapse="{accordion: true}" style="padding: 8px;">
+
+                <!-- 侧滑布局 -->
+
+                <li v-if="config && config.drawer" v-for="item in config.drawer.items" class="mdui-collapse-item mdui-collapse-item">
+
+                    <ul class="mdui-list">
+
+                        <a href="https://www.123pan.com/s/1Ao8Vv-VsqBH" class="mdui-list-item mdui-ripple">
+
+                            <i class="mdui-list-item-icon mdui-icon material-icons">move_to_inbox</i>
+
+                            <div class="mdui-list-item-content">下载</div>
+
+                        </a>
+
+                        <a href="https://jq.qq.com/?_wv=1027&k=EhZW7rBP" class="mdui-list-item mdui-ripple">
+
+                            <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
+
+                            <div class="mdui-list-item-content">群聊</div>
+
+                        </a>
+
+                        <a href="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/ba338cc6-42b6-4fa6-a8fc-3f19a31299ea.jpg" class="mdui-list-item mdui-ripple">
+
+                            <i class="mdui-list-item-icon mdui-icon material-icons">delete</i>
+
+                            <div class="mdui-list-item-content">赞助</div>
+
+                        </a>
+
+                        <a href="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/a9735dcb-93e1-45f4-8420-7e63a828f003.jpg" class="mdui-list-item mdui-ripple">
+
+                            <i class="mdui-list-item-icon mdui-icon material-icons">error</i>
+
+                            <div class="mdui-list-item-content">作者</div>
+
+                        </a>
+
+                        <a href="https://www.123pan.com/s/1Ao8Vv-VsqBH" class="mdui-list-item mdui-ripple">
+
+                            <i class="mdui-list-item-icon mdui-icon material-icons"></i>
+
+                            <div class="mdui-list-item-content">赫晖影视</div>
+
+                        </a>
+
+                    </ul>
+
+            </ul>
+
+            </li>
+
+            </ul>
+
+        </div>
+
+        <div class="mdui-container">
+
+            <div id="example-1" class="mdui-p-a-2">
+
+                <div class="mdui-row mdui-typo">
+
+                    <div class="mdui-col-sm-6 mdui-col-md-4">
+
+                        <div class="mdui-card">
+
+                            <div class="mdui-card-header">
+
+                                <img class="mdui-card-header-avatar" src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/9b66a125-0525-4fb8-af48-ad0d535b5ef1.jpg" />
+
+                                <div class="mdui-card-header-title">赫晖漫剪</div>
+
+                                <div class="mdui-card-header-subtitle">人生犹如一场戏，明知是假的，但是你还是陪他走到最后</div>
+
+                            </div>
+
+                            <div class="mdui-card-media">
+
+                                <img src="https://ldbbs.ldmnq.com/bbs/topic/attachment/2023-2/76aed787-5fa3-4e8c-8b89-b1e16b9f22c5.jpg" />
+
+                                <div class="mdui-card-menu">
+
+                                    <button class="mdui-btn mdui-btn-icon mdui-text-color-white"><i class="mdui-icon material-icons">share</i></button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mdui-card-primary">
+
+                                <div class="mdui-card-primary-title">感慨</div>
+
+                                <div class="mdui-card-primary-subtitle">赫晖日</div>
+
+                            </div>
+
+                            <div class="mdui-card-content">「人本来就不是什么深情的动物，根据科学家的研究证明了这项事实，如果在婚礼上你看到别人说我会爱你一辈子，那都是假的，所以男的为什么先死，都已经把下辈子给提前预约了」</div>
+
+                            <div class="mdui-card-actions">
+
+                                <button class="mdui-btn mdui-ripple" onclick="mdui.snackbar('就是一辈子都当单身狗算了')">或许我可以给你一些信息提示</button>
+
+                                <button class="mdui-btn mdui-ripple" onclick="window.open('https://v.kuaishou.com/Hel6KW 看了这么多快手，还是「赫晖漫剪」最好玩了！ 复制此消息，打开【快手极速版】直接观看！')">快手主页</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="example-2" class="mdui-p-a-2">
+
+                <div class="mdui-typo">
+
+                    <h1>赫晖 <small>人生故事虽是浪漫，但别忘记它只是过场</small> </h1>
+
+                    <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.open('https://jq.qq.com/?_wv=1027&k=EhZW7rBP')">群聊</button>
+
+                    <div style="margin-top: 50px">
+
+                        <div class="mdui-table-fluid">
+
+                            <table class="mdui-table mdui-table-hoverable">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>动漫</th>
+
+                                        <th></th>
+
+                                        <th></th>
+
+                                        <th></th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>1</td>
+
+                                        <td>六花</td>
+
+                                        <td>二万</td>
+
+                                        <td>零</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>2</td>
+
+                                        <td>三玖</td>
+
+                                        <td>柯南</td>
+
+                                        <td>鬼灭</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>3</td>
+
+                                        <td>魁拔</td>
+
+                                        <td>赛亚人</td>
+
+                                        <td>光头</td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                        <br>
+
+                        <div class="mdui-table-fluid">
+
+                            <table class="mdui-table mdui-table-selectable">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>漫剪视频投票 (赫晖)</th>
+
+                                        <th class="mdui-table-col-numeric" mdui-tooltip="{content: '看什么？你个傻子，你没看过吗？'}">Calories</th>
+
+                                        <th class="mdui-table-col-numeric">人数</th>
+
+                                        <th class="mdui-table-col-numeric">数量</th>
+
+                                        <th class="mdui-table-col-numeric">女</th>
+
+                                        <th class="mdui-table-col-numeric">男</th>
+
+                                        
+
+                                            </th>
+
+                                          
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr class="mdui-table-row-selected">
+
+                                        <td>零</td>
+
+                                        <td>159</td>
+
+                                        <td>6</td>
+
+                                        <td>24</td>
+
+                                        <td>4</td>
+
+                                        <td>87</td>
+
+                                       
+
+                                    
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>咒术回战</td>
+
+                                        <td>237</td>
+
+                                        <td>9.0</td>
+
+                                        <td>37</td>
+
+                                        <td>6</td>
+
+                                        <td>129</td>
+
+                                        
+
+                                        
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>尼尔机械纪元</td>
+
+                                        <td>262</td>
+
+                                        <td>16</td>
+
+                                        <td>24</td>
+
+                                        <td>6</td>
+
+                                        <td>337</td>
+
+                                        
+
+                                       
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="example-3" class="mdui-p-a-2">
+
+                <div class="mdui-typo">
+
+                    <h1>赫晖 <small>人生像一场电影，总有结束的时候</small> </h1>
+
+                    <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.open('https://www.123pan.com/s/1Ao8Vv-VsqBH')">下载赫晖商店</button>
+
+                    <div style="margin-top: 50px">
+
+                        <div class="mdui-panel mdui-panel-popout" mdui-panel>
+
+                            <div class="mdui-panel-item">
+
+                                <div class="mdui-panel-item-header">
+
+                                    <div class="mdui-panel-item-title">软件推广</div>
+
+                                    <div class="mdui-panel-item-summary"></div>
+
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+
+                                </div>
+
+                                <div class="mdui-panel-item-body">
+
+                                    <p>黄鸟</p>
+
+                                    <p>照妖镜</p>
+
+                                    <p>今天吃什么</p>
+
+                                    <p>表白墙</p>
+
+                                    <p>匿名聊天室</p>
+
+                                    <p>空</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mdui-panel-item">
+
+                                <div class="mdui-panel-item-header">
+
+                                    <div class="mdui-panel-item-title">外版软件</div>
+
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+
+                                </div>
+
+                                <div class="mdui-panel-item-body">
+
+                                    <p>小蓝鸟</p>
+
+                                    <p>ig</p>
+
+                                    <p>谷歌</p>
+
+                                    <p>fb</p>
+
+                                    <p>yt</p>
+
+                                    <p>ks国际服</p>
+
+                                    <div class="mdui-panel-item-actions">
+
+                                        <button class="mdui-btn mdui-ripple">cancel</button>
+
+                                        <button class="mdui-btn mdui-ripple">save</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mdui-panel-item">
+
+                                <div class="mdui-panel-item-header">
+
+                                    <div class="mdui-panel-item-title">代剪辑</div>
+
+                                    <div class="mdui-panel-item-summary"></div>
+
+                                    <div class="mdui-panel-item-summary"></div>
+
+                                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+
+                                </div>
+
+                                <div class="mdui-panel-item-body">
+
+                                    <p>Third content</p>
+
+                                    <p>Third content</p>
+
+                                    <p>Third content</p>
+
+                                    <p>Third content</p>
+
+                                    <p>Third content</p>
+
+                                    <p>Third content</p>
+
+                                    <div class="mdui-panel-item-actions">
+
+                                        <button class="mdui-btn mdui-ripple">cancel</button>
+
+                                        <button class="mdui-btn mdui-ripple">save</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="flexible.js"></script>
+
+    <!-- 音乐播放器代码 -->
+
+    <script id="xplayer" src="https://music.xfyun.club/Static/player/player.js" key="606e5a8824639" m="1"></script>
+
+  </body>
+
+</html>
